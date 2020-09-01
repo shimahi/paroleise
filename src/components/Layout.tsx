@@ -9,8 +9,8 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Head>
-        <title>Document</title>
-        {/* <link rel='icon' href='/favicon.ico' /> */}
+        <title>paroleise</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>{children}</main>
     </>
