@@ -28,8 +28,6 @@ const hero = css`
   width: 100%;
   height: 100vh;
   position: relative;
-  ${sm} {
-  }
 `
 
 const hero__copy = css`

@@ -6,7 +6,6 @@ export const useIsXSmall = () => {
 
   const isXSmall = useMedia('(max-width: 575.98px)')
 
-  // サーバーサイドで実行されないようにする
   if (!isClient) return false
 
   return isXSmall
@@ -17,7 +16,6 @@ export const useIsMedium = () => {
 
   const isMedium = useMedia('(min-width: 767.98px)')
 
-  // サーバーサイドで実行されないようにする
   if (!isClient) return false
 
   return isMedium

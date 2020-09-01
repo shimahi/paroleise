@@ -1,5 +1,6 @@
 import { css } from '@emotion/core'
 
+// breakpoint
 export const xxxs = `@media (max-width: 374.98px)`
 export const xxs = `@media (max-width: 413.98px)`
 export const xs = `@media (max-width: 575.98px)`

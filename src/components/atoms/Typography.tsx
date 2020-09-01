@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { sm, convertTrackingToEm } from 'style'
 
-// フォント・フォントサイズ・フォントスタイル・カーニング・行間
+// All text assets are written here.
 
 export const CopyHeadingText = styled.h1`
   font-family: 'Fira Sans', sans-serif;
@@ -29,18 +29,17 @@ export const CopyText = styled.h2`
 export const CopySmallText = styled.p`
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
+  font-size: 0.875em;
   line-height: 1.838em;
   letter-spacing: ${convertTrackingToEm(230)};
-  ${sm} {
-    font-size: 0.875em;
-  }
 `
 
 export const PlainText = styled.p`
   font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
   font-size: 0.875em;
-  letter-spacing: ${convertTrackingToEm(15)};
   line-height: 1.75em;
+  letter-spacing: ${convertTrackingToEm(15)};
   ${sm} {
     line-height: 1.875em;
     font-size: 0.938em;
