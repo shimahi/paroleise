@@ -1,9 +1,10 @@
 import Layout from 'components/Layout'
+import { IndexTemplate } from 'components/templates/IndexTemplate'
 
 export default function Index() {
   return (
     <Layout>
-      <h1>Hello Next!</h1>
+      <IndexTemplate />
     </Layout>
   )
 }

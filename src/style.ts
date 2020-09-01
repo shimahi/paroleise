@@ -9,6 +9,11 @@ export const lg = `@media (min-width: 991.98px)`
 export const xl = `@media (min-width: 1199.98px)`
 export const xxl = `@media (min-width: 1599.98px)`
 
+export const white = '#fff'
+export const lightGray = '#F8F8F8'
+export const gray = '#EDF0F2'
+export const blue = '#00437E'
+
 export const fixAspectRatio = (x: number, y: number) => css`
   &:before {
     content: '';
@@ -19,4 +24,18 @@ export const fixAspectRatio = (x: number, y: number) => css`
 
 export const convertTrackingToEm = (tracking: number) => {
   return `${tracking / 1000}em`
+}
+
+export const applyChildGridArea = (count: number) => {
+  const array = [...Array(count)].map((_, i) => i + 1)
+
+  return array.map((n) => {
+    const area = `area_${n}`
+
+    return css`
+      & > *:nth-of-type(${String(n)}) {
+        grid-area: ${area};
+      }
+    `
+  })
 }
