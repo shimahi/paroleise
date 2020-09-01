@@ -9,10 +9,21 @@ export const lg = `@media (min-width: 991.98px)`
 export const xl = `@media (min-width: 1199.98px)`
 export const xxl = `@media (min-width: 1599.98px)`
 
-export const white = '#fff'
-export const lightGray = '#F8F8F8'
-export const gray = '#EDF0F2'
-export const blue = '#00437E'
+// color
+const white = '#fff'
+// const lightGray = '#F8F8F8'
+// const gray = '#EDF0F2'
+const blue = '#00437E'
+const lightblue = '#EDF0F2'
+export const textColor = blue
+export const baseColor = lightblue
+export const canvasColor = white
+
+// lib
+
+export const convertTrackingToEm = (tracking: number) => {
+  return `${tracking / 1000}em`
+}
 
 export const fixAspectRatio = (x: number, y: number) => css`
   &:before {
@@ -21,10 +32,6 @@ export const fixAspectRatio = (x: number, y: number) => css`
     padding-top: calc((${x} / ${y} * 100%));
   }
 `
-
-export const convertTrackingToEm = (tracking: number) => {
-  return `${tracking / 1000}em`
-}
 
 export const applyChildGridArea = (count: number) => {
   const array = [...Array(count)].map((_, i) => i + 1)

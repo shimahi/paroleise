@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app'
 import 'ress'
 import { Global, css } from '@emotion/core'
+import { textColor, canvasColor } from 'style'
 import AppProvider from 'store'
 
 const App = ({ Component, pageProps }: AppProps) => {
@@ -25,6 +26,8 @@ const globalStyles = css`
 
   body {
     height: 100%;
+    background-color: ${canvasColor};
+    color: ${textColor};
   }
 
   a {
