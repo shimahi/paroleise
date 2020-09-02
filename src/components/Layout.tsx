@@ -1,6 +1,8 @@
 import { ReactNode } from 'react'
 import Head from 'next/head'
-import { ScreenBorder } from 'components/atoms/ScreenBorder'
+import { Header } from 'components/organism/Header'
+import { ScreenBorder } from 'components/organism/ScreenBorder'
+import { SideNavigation } from 'components/organism/SideNavigation'
 
 type LayoutProps = {
   children: ReactNode
@@ -17,6 +19,8 @@ const Layout = ({ children }: LayoutProps) => {
           rel="stylesheet"
         />
       </Head>
+      <Header />
+      <SideNavigation />
       <main>{children}</main>
       <ScreenBorder />
     </>

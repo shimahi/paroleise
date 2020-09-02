@@ -40,9 +40,9 @@ const globalStyles = css`
     background-color: ${canvasColor};
     color: ${textColor};
   }
-
   a {
     text-decoration: none;
+    color: ${textColor};
   }
 
   ul {

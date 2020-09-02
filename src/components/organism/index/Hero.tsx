@@ -1,6 +1,6 @@
 import { css } from '@emotion/core'
 import { sm, baseColor, canvasColor } from 'style'
-import { CopyHeadingText, CopyText, CopySmallText } from 'components/atoms/Typography'
+import { CopyTitleText, CopyText, CopySmallText } from 'components/atoms/Typography'
 import { useIsXSmall } from 'lib/useMediaQuery'
 
 export const Hero = () => {
@@ -9,10 +9,10 @@ export const Hero = () => {
   return (
     <section css={hero}>
       <div css={hero__copy}>
-        <CopyHeadingText>
+        <CopyTitleText>
           paroleise
           <i>/</i>
-        </CopyHeadingText>
+        </CopyTitleText>
         <CopyText>
           illustration <br />
           typography {isXSmall && <br />} and music
