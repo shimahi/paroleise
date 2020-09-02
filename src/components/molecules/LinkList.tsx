@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { SerializedStyles } from '@emotion/core'
+import { StyledComponent } from '@emotion/styled'
 
 type Link = {
   name: string
@@ -9,7 +10,7 @@ type Link = {
 
 type LinkListProps = {
   linkList: Link[]
-  Typography: any
+  Typography: StyledComponent<any, any, any>
   cssProps?: SerializedStyles
 }
 
