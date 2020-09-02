@@ -59,9 +59,9 @@ const globalStyles = css`
     letter-spacing: 1px;
   }
 
-  * {
+  /* * {
     outline: solid 1px rgba(100, 255, 200, 1);
-  }
+  } */
 
   a,
   button,

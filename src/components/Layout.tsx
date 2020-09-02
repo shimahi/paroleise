@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import Head from 'next/head'
+import { ScreenBorder } from 'components/atoms/ScreenBorder'
 
 type LayoutProps = {
   children: ReactNode
@@ -17,6 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
         />
       </Head>
       <main>{children}</main>
+      <ScreenBorder />
     </>
   )
 }

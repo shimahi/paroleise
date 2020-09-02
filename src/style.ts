@@ -16,6 +16,8 @@ const white = '#fff'
 // const gray = '#EDF0F2'
 const blue = '#00437E'
 const lightblue = '#EDF0F2'
+
+export const borderColor = blue
 export const textColor = blue
 export const baseColor = lightblue
 export const canvasColor = white
