@@ -1,8 +1,19 @@
 import { AppProps } from 'next/app'
 import 'ress'
+import 'nprogress/nprogress.css'
 import { Global, css } from '@emotion/core'
 import { textColor, canvasColor } from 'style'
 import AppProvider from 'store'
+
+import NProgress from 'nprogress'
+import Router from 'next/router'
+
+Router.events.on('routeChangeStart', (url) => {
+  console.log(`Loading: ${url}`)
+  NProgress.start()
+})
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
@@ -60,5 +71,11 @@ const globalStyles = css`
     &:hover {
       opacity: 0.8;
     }
+  }
+
+  #nprogress .spinner {
+    top: 50vh;
+    right: 50vw;
+    opacity: 0.4;
   }
 `
