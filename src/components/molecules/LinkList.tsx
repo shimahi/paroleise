@@ -10,22 +10,22 @@ type Link = {
 
 type LinkListProps = {
   linkList: Link[]
-  Typography: StyledComponent<any, any, any>
+  Component: StyledComponent<any, any, any>
   cssProps?: SerializedStyles
 }
 
-export const LinkList = ({ linkList, Typography, cssProps }: LinkListProps) => {
+export const LinkList = ({ linkList, Component, cssProps }: LinkListProps) => {
   return (
     <ul css={cssProps}>
       {linkList.map(({ href, name, isOuter = false }, index) => (
         <li key={index}>
           {isOuter ? (
-            <Typography href={href} target="_blank" rel="noopener">
+            <Component href={href} target="_blank" rel="noopener">
               {name}
-            </Typography>
+            </Component>
           ) : (
             <Link href={href}>
-              <Typography>{name}</Typography>
+              <Component>{name}</Component>
             </Link>
           )}
         </li>

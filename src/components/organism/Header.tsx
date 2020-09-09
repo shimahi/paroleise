@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { HeaderLinkText } from 'components/atoms/Typography'
+import { Text } from 'components/atoms/Typography'
 import { css } from '@emotion/core'
 import { useIsXSmall } from 'lib/useMediaQuery'
 
@@ -12,7 +12,9 @@ export const Header = () => {
         <p onClick={() => alert('clicked!!!')}>toggle</p>
       ) : (
         <Link href="/">
-          <HeaderLinkText>paroleise</HeaderLinkText>
+          <Text size={0.9} as="a">
+            paroleise
+          </Text>
         </Link>
       )}
     </header>

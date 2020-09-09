@@ -24,7 +24,7 @@ export const canvasColor = white
 
 // lib
 
-export const convertTrackingToEm = (tracking: number) => {
+export const convertTrackingToEm = (tracking = 100) => {
   return `${tracking / 1000}em`
 }
 

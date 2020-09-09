@@ -1,6 +1,7 @@
+import styled from '@emotion/styled'
+import { convertTrackingToEm } from 'style'
 import { css } from '@emotion/core'
 import { useIsXSmall } from 'lib/useMediaQuery'
-import { SideNavigationInnerLinkText, SideNavigationOuterLinkText } from 'components/atoms/Typography'
 import { LinkList } from 'components/molecules/LinkList'
 
 export const SideNavigation = () => {
@@ -37,12 +38,26 @@ export const SideNavigation = () => {
 
   return (
     <aside css={sideNavigation}>
-      <LinkList linkList={innerLinkList} Typography={SideNavigationInnerLinkText} cssProps={sideNavigation__inner} />
+      <LinkList linkList={innerLinkList} Component={InnerLinkText} cssProps={sideNavigation__inner} />
 
-      <LinkList linkList={outerLinkList} Typography={SideNavigationOuterLinkText} cssProps={sideNavigation__outer} />
+      <LinkList linkList={outerLinkList} Component={OuterLinkText} cssProps={sideNavigation__outer} />
     </aside>
   )
 }
+
+const InnerLinkText = styled.a`
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1.125em;
+  letter-spacing: ${convertTrackingToEm(200)};
+`
+
+const OuterLinkText = styled.a`
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+  font-size: 0.875em;
+  letter-spacing: ${convertTrackingToEm(100)};
+`
 
 const sideNavigation = css`
   position: fixed;
